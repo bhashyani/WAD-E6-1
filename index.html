@@ -5,7 +5,9 @@
 
     <script>
         function displayDate() {
-            document.getElementById("dateBox").value = new Date().toLocaleDateString();
+            var today = new Date();
+            var date = today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
+            document.getElementById("dateBox").value = date;
         }
 
         function calculateFactorial() {

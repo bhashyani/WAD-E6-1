@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Date and Factorial</title>
+
+    <script>
+        function displayDate() {
+            document.getElementById("dateBox").value = new date().toLocaleDateString();
+        }
+
+        function calculateFactorial() {
+            var n = prompt("Enter a number to calculate its factorial:");
+
+            if (n === null || n === "") {
+                alert("No number entered!");
+                return;
+            }
+
+            n = parseInt(n);
+            var fact = 1;
+
+            for (var i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+
+            alert("The factorial of " + n + " is " + fact + ".");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Display Date" onclick="displayDate()">
+    <input type="text" id="dateBox">
+    <input type="button" value="Calculate Factorial" onclick="calculateFactorial()">
+</body>
+</html>
